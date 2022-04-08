@@ -70,7 +70,6 @@ loadGallery ( GALLERIES.MATURE, 'gallery/mature' );
             const jwtClaims = jwtutil.verify ( request.query.token, JWT_SIGNING_KEY );
             if ( jwtClaims && jwtClaims.mature ) {
                 request.gallery = GALLERIES.MATURE;
-                console.log ( 'MATURE!' );
             }
         }
         next ();
