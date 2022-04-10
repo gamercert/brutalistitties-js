@@ -2,9 +2,9 @@
     margin:             0px;
     padding:            0px;
     box-sizing:         border-box;
+    font-family:        sans-serif;
     overflow:           hidden;
     white-space:        nowrap;
-    font-family:        sans-serif;
 }
 
 *:focus {
@@ -32,6 +32,13 @@ h3 {
     font-size:          32px;
     font-family:        'Anton', sans-serif;
     color:              red;
+}
+
+h4 {
+    font-size:          24px;
+    font-family:        'Anton', sans-serif;
+    color:              red;
+    margin:             10px 0px;
 }
 
 a {
@@ -108,3 +115,90 @@ input[type=submit]:active {
 .nav-button:active {
     background-color:   #bbbbbb;
 }
+
+.modal {
+    position:           fixed;
+    z-index:            1;
+    left:               0;
+    top:                0;
+    width:              100%;
+    height:             100%;
+    overflow:           auto;
+    background-color:   rgb(0,0,0);
+    background-color:   rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color:   #fefefe;
+    margin:             5% auto;
+    padding:            20px;
+    border:             1px solid #888;
+    width:              80%;
+    box-shadow:         0px 5px 35px 5px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content > * {
+    overflow:           visible;
+    white-space:        normal;
+}
+
+.modal-content > p {
+    margin-bottom:      10px;
+}
+
+.grid {
+    display:                grid;
+    grid-template-rows:       96px auto 192px 24px;
+    grid-template-columns:    48px auto 48px;
+    grid-template-areas:
+        "header header header"
+        "left slides right"
+        "form form form"
+        "footer footer footer"
+    ;
+    position:               absolute;
+    width:                  100%;
+    height:                 100%;
+    background:             #000000;
+    align-items:            stretch;
+    justify-items:          stretch;
+}
+
+.grid div {
+    position:               relative;
+}
+
+.grid-content {
+    width:                  fit-content;
+}
+
+.grid-area-header {
+    grid-area:              header;
+    background-color:       #ff0000;
+}
+
+.grid-area-left {
+    grid-area:              left;
+    background-color:       #00ffff;
+}
+
+.grid-area-slides {
+    grid-area:              slides;
+    background-color:       #ffff77;
+}
+
+.grid-area-right {
+    grid-area:              right;
+    background-color:       #00ff00;
+}
+
+.grid-area-form {
+    grid-area:              form;
+    background-color:       #000000;
+}
+
+.grid-area-footer {
+    grid-area:              footer;
+    background-color:       #000000;
+}
+
