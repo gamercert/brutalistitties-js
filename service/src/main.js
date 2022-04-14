@@ -14,7 +14,9 @@ import _                            from 'lodash';
 import path                         from 'path';
 import * as sodium                  from 'sodium';
 
-const JWT_SIGNING_KEY = 'd1168613e7f71f6416047538edd9ad6699e12e3f32fadd2ffdc2ebd5efcf5b0f';
+const PORT              = 7175;
+const SERVICE_URL       = 'https://sig.gamercert.com/'
+const JWT_SIGNING_KEY   = 'd1168613e7f71f6416047538edd9ad6699e12e3f32fadd2ffdc2ebd5efcf5b0f';
 
 const GALLERIES = {
     GENERAL:        {},
@@ -91,8 +93,8 @@ loadGallery ( GALLERIES.MATURE, 'gallery/mature' );
 
     server.use ( '/', router );
 
-    await server.listen ( 8008 );
-    console.log ( 'LISTENING ON PORT:', 8008 );
+    await server.listen ( PORT );
+    console.log ( 'LISTENING ON PORT:', PORT );
         
 })();
 
@@ -171,7 +173,7 @@ async function postClaimAsync ( request, response ) {
 
         sodium.assert ( claim.nonce === jwtClaims.nonce );
 
-        const keyResult = await ( await fetch ( `http://localhost:7777/sig/keys/${ claim.keyName }` )).json ();
+        const keyResult = await ( await fetch ( `${ SERVICE_URL }/sig/keys/${ claim.keyName }` )).json ();
         sodium.assert ( keyResult.publicKey );
 
         const hash      = sodium.hash ( `${ claim.nonce }${ claim.salt }` );

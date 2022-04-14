@@ -32,7 +32,7 @@ RUN npm install \
 
 COPY . /app
 
-EXPOSE 7777
+EXPOSE 7175
 
 ENTRYPOINT [ "npm" ]
 CMD [ "run", "prod" ]

@@ -12,7 +12,7 @@ import ReactDOM                             from 'react-dom';
 import ReactMarkdown                        from 'react-markdown';
 import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom';
 
-const SERVICE_URL = 'http://localhost:8008/';
+const SERVICE_URL = 'https://api.brutalistitties.com/';
 
 //----------------------------------------------------------------//
 const AgeClaimForm = ( props ) => {
