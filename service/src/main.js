@@ -173,7 +173,7 @@ async function postClaimAsync ( request, response ) {
 
         sodium.assert ( claim.nonce === jwtClaims.nonce );
 
-        const keyResult = await ( await fetch ( `${ SERVICE_URL }/sig/keys/${ claim.keyName }` )).json ();
+        const keyResult = await ( await fetch ( `${ SERVICE_URL }sig/keys/${ claim.keyName }` )).json ();
         sodium.assert ( keyResult.publicKey );
 
         const hash      = sodium.hash ( `${ claim.nonce }${ claim.salt }` );
