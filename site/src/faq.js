@@ -4,7 +4,7 @@ export const FAQ = `
 
 #### What is this?
 
-This is a demo for Gamercert. Gamercert is a privacy-preserving online identity service that supports anonymous "ad hoc" age verification.
+This is a demo for [Gamercert](https://gamercert.com). Gamercert is a privacy-preserving online identity service that supports anonymous "ad hoc" age verification.
 
 #### How does it work?
 
@@ -12,7 +12,7 @@ If you are a website operator, you can generate a random "challenge string" for 
 
 No information that could identify your website or associate it with a user is sent to Gamercert's server and no information that could identity or track a user is given to you.
 
-You can find the sourcode and more detailed instructions here.
+You can find the sourcecode and more detailed instructions [here](https://github.com/gamercert/brutalistitties-js).
 
 #### How does Gamercert verify a user's age?
 
@@ -20,7 +20,7 @@ Gamercert uses a mix of in-house manual review and third-party KYC vendors such 
 
 #### Will Gamercert solve my age-verification compliance needs?
 
-We don't know. Read the ToS and ask your lawyers.
+We don't know. Read the [ToS](https://gamercert.com/tos) and ask your lawyers.
 
 #### Is Gamercert free for websites?
 

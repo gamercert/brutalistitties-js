@@ -66,7 +66,7 @@ const AgeClaimForm = ( props ) => {
             backgroundColor:        '#000',
         }}>
             <div style = {{ color: '#ffffff', lineHeight: '1.25em', marginTop: '5px', marginBottom: '10px' }}>
-                <p>Want to remove the black bars? Verify your age with an <b>anonymous ad hoc age claim</b> from <a href = 'https://google.com' target = '_blank'>Gamercert</a>.</p>
+                <p>Want to remove the black bars? Verify your age with an <b>anonymous ad hoc age claim</b> from <a href = 'https://gamercert.com' target = '_blank'>Gamercert</a>.</p>
                 <p>Nothing about this site will be revealed to Gamercert. Nothing about your Gamercert account will be revealed to this site.</p>
                 <p>This site's server is stateless and will not record anything about your visit. This site does not use cookies or local storage.</p>
                 <p>Haven't verified your Gamercert account? Test things out with a <b>pretend</b> claim. We won't tell your mom.</p>
